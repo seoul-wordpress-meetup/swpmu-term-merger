@@ -1,0 +1,9 @@
+/dist
+/node_modules
+
+/pnpm-lock.yaml
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

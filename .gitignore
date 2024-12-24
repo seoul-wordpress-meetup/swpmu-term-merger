@@ -1,0 +1,15 @@
+node_modules/
+
+/tests/wp-test-core/
+/tests/wp-test-lib/
+/vendor/*
+!/vendor/bojaghi
+!/vendor/composer
+!/vendor/psr
+!/vendor/autoload.php
+
+.idea
+.vscode
+*.bak
+*.cache
+*.swp

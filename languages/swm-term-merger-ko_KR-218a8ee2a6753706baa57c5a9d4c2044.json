@@ -1,0 +1,72 @@
+{
+  "translation-revision-date": "2025-01-05 18:16+0900",
+  "generator": "WP-CLI\/2.11.0",
+  "source": "dist\/assets\/term-merger-LZyC8tBm.js",
+  "domain": "messages",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "messages",
+        "lang": "ko_KR",
+        "plural-forms": "nplurals=1; plural=0;"
+      },
+      "Loaing now...": [
+        "\ubd88\ub7ec\uc624\ub294 \uc911..."
+      ],
+      "Error: ": [
+        "\uc5d0\ub7ec: "
+      ],
+      "Step 2\/3: Term Selection": [
+        "\uacfc\uc815 2\/3: \ud140 \uc120\ud0dd"
+      ],
+      "Please choose two or more terms to merge.": [
+        "\ubcd1\ud569\uc2dc\ud0ac 2\uac1c \uc774\uc0c1\uc758 \ud140\uc744 \uc120\ud0dd\ud558\uc138\uc694."
+      ],
+      "Previous Step": [
+        "\uc774\uc804 \uacfc\uc815"
+      ],
+      "Merge Selection": [
+        "\ubcd1\ud569 \uc120\ud0dd"
+      ],
+      "Step 3\/3: Merge Selection": [
+        "\uacfc\uc815 3\/3: \ubcd1\ud569 \uc120\ud0dd"
+      ],
+      "Please choolse a head term from the term list below. All the other terms will be merged into it.": [
+        "\uc544\ub798 \ud140 \ubaa9\ub85d\uc5d0\uc11c \uae30\uc900 \ud140\uc744 \ud558\ub098 \uc120\ud0dd\ud558\uc138\uc694. \ub098\uba38\uc9c0 \ud140\uc740 \uc774 \ud140\uc73c\ub85c \ubcd1\ud569\ub420 \uac83\uc785\ub2c8\ub2e4."
+      ],
+      "I have backup my database. I am ready to merge terms.": [
+        "\ub370\uc774\ud130\ubca0\uc774\uc2a4\ub97c \ubc31\uc5c5\ud588\uc2b5\ub2c8\ub2e4. \ud140\uc744 \ubcd1\ud569\ud560 \uc900\ube44\uac00 \ub418\uc5c8\uc2b5\ub2c8\ub2e4.."
+      ],
+      "[Last Confirmation]": [
+        "[\ub9c8\uc9c0\ub9c9 \ud655\uc778 \uacfc\uc815]"
+      ],
+      "Selected %1$d term will be merged into %2$s.": [
+        "\uc120\ud0dd\ub41c %1$d \uac1c \ud140\uc774 '%2$s' \ud140\uc73c\ub85c \ubcd1\ud569\ub420 \uac83\uc785\ub2c8\ub2e4."
+      ],
+      "Are you sure?": [
+        "\uc815\ub9d0\ub85c \ud655\uc2e4\ud569\ub2c8\uae4c?"
+      ],
+      "Proceed": [
+        "\uc9c4\ud589\ud558\uae30"
+      ],
+      "Head": [
+        "\uae30\uc900"
+      ],
+      "Step 1\/3: Choose Taxonomy": [
+        "\uacfc\uc815 1\/3: \ud0dd\uc18c\ub178\ubbf8 \uc120\ud0dd"
+      ],
+      "Choose a taxonomy to merge: ": [
+        "\ubcd1\ud569 \uc791\uc5c5\uc744 \ud560 \ud0dd\uc18c\ub178\ubbf8\ub97c \uc120\ud0dd: "
+      ],
+      "Taxonomy Selection": [
+        "\ud0dd\uc18c\ub178\ubbf8 \uc120\ud0dd"
+      ],
+      "Choolse Taxonomy": [
+        "\ud0dd\uc18c\ub178\ubbf8\ub97c \uc120\ud0dd"
+      ],
+      "Select Term": [
+        "\ud140 \uc120\ud0dd"
+      ]
+    }
+  }
+}

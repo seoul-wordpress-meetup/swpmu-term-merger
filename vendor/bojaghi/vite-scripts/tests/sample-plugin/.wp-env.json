@@ -1,0 +1,19 @@
+{
+  "config": {
+    "WP_ENVIRONMENT_TYPE": "development",
+    "VITE_SCRIPTS_DIR": "/var/www/html/wp-content/vite-scripts"
+  },
+  "lifecycleScripts": {
+    "afterStart": "pnpm run activate-theme"
+  },
+  "mappings": {
+    "wp-content/vite-scripts": "../../"
+  },
+  "phpVersion": "8.0",
+  "plugins": [
+    "."
+  ],
+  "themes": [
+    "WordPress/twentysixteen"
+  ]
+}
