@@ -5,7 +5,7 @@
  * Description:       Term merger plugin for WordPress.
  * Author:            Seoul WordPress Meetup
  * Author URI:        https://www.meetup.com/ko-KR/wordpress-meetup-seoul/
- * Requires at least: 6.4
+ * Requires at least: 5.9.0
  * Requires PHP:      8.0
  * Textdomain:        swm-term-merger
  * License:           GPL-v2-or-later
