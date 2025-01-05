@@ -5,6 +5,7 @@ import {useReducer} from 'react'
 enum ActionType {
     ADD_TERM = 'addTerm',
     REMOVE_TERM = 'removeTerm',
+    RESET = 'reset',
     SET_CURRENT_STEP = 'setCurrentStep',
     SET_HEAD = 'setHead',
     SET_SELECTED = 'setSelected',
@@ -15,6 +16,7 @@ enum ActionType {
 type Action =
     | { type: ActionType.ADD_TERM, payload: number }
     | { type: ActionType.REMOVE_TERM, payload: number }
+    | { type: ActionType.RESET, payload: Step | undefined }
     | { type: ActionType.SET_CURRENT_STEP; payload: Step }
     | { type: ActionType.SET_HEAD; payload: number }
     | { type: ActionType.SET_SELECTED; payload: Set<number> | Array<number> }
@@ -46,6 +48,16 @@ function reducer(prevState: State, action: Action) {
                     selected: nextTerms,
                 }
             })()
+
+        case ActionType.RESET:
+            return {
+                ...prevState,
+                currentStep: payload ?? 'taxonomy-select',
+                head: 0,
+                selected: new Set<number>(),
+                taxonomy: '',
+                terms: [],
+            }
 
         case ActionType.SET_SELECTED:
             return {

@@ -49,7 +49,7 @@ export default function Step3_MergeSelect() {
         }
         adminAjax.mergeTerms(head, [...selected.values()], taxonomy).then(() => {
             dispatch({
-                type: ActionType.SET_CURRENT_STEP,
+                type: ActionType.RESET,
                 payload: 'merge-complete',
             })
         }).catch((reason) => {
