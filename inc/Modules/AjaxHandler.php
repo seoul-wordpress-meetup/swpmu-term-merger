@@ -19,6 +19,8 @@ class AjaxHandler implements Module
      */
     public function getTaxonomies(): void
     {
+        check_ajax_referer('swmTmgr/getTaxonomies', '_swm_tmgr_nonce');
+
         $taxonomies = $this->continy->get(Taxonomy::class)->getTaxonomies();
 
         wp_send_json_success($taxonomies);
@@ -29,7 +31,9 @@ class AjaxHandler implements Module
      */
     public function getTerms(): void
     {
-        $taxonomy = $_REQUEST['taxonomy'] ?? '';
+        check_ajax_referer('swmTmgr/getTerms', '_swm_tmgr_nonce');
+
+        $taxonomy = sanitize_key($_REQUEST['taxonomy'] ?? '');
         $terms    = $this->continy->get(Taxonomy::class)->getTerms($taxonomy);
 
         if (is_wp_error($terms)) {
@@ -40,16 +44,18 @@ class AjaxHandler implements Module
     }
 
     /**
-     * Required paramters:
+     * Required parameters:
      *
      * - head:     Pivot term ID
      * - target:   Array of term ID. Head ID may be included or not.
-     * - taxonomy: Hint to confirm that all term IDs are valiid terms of the taxonomy.
+     * - taxonomy: Hint to confirm that all term IDs are valid terms of the taxonomy.
      *
      * @throws ContinyException
      */
     public function mergeTerms(): void
     {
+        check_ajax_referer('swmTmgr/mergeTerms', '_swm_tmgr_nonce');
+
         $error    = new \WP_Error();
         $head     = absint($_REQUEST['head'] ?? '0');
         $target   = array_filter(array_map('absint', (array)($_REQUEST['target'] ?? '0')), fn($v) => $v !== $head);

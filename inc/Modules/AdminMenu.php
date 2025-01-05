@@ -25,7 +25,7 @@ class AdminMenu implements Module
 
     public function outputTermMergerPage(): void
     {
-        echo '<h1 class="wp-heading-inline">' . _x('Term Merger', 'H1 title', 'swm-term-merger') . '</h1>' . PHP_EOL;
+        echo '<h1 class="wp-heading-inline">' . esc_html_x('Term Merger', 'H1 title', 'swm-term-merger') . '</h1>' . PHP_EOL;
         echo '<hr class="wp-header-end"/>' . PHP_EOL;
         echo '<div class="wrap swm-term-merger" id="term-merger-root" data-vite-script-root="true"></div>' . PHP_EOL;
 

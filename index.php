@@ -8,6 +8,7 @@
  * Requires at least: 6.4
  * Requires PHP:      8.0
  * Textdomain:        swm-term-merger
+ * License:           GPL-v2-or-later
  * Version:           0.9.0
  */
 
