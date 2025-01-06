@@ -50,3 +50,6 @@ do
     cp "$SRC_PATH" "$DST_PATH"
   fi
 done
+
+# Remove bojaghi bin, tests
+find "$DST/vendor/bojaghi" -maxdepth 2 -type d  \( -name 'bin' -o -name 'tests' \) -exec rm -rf {} \;
