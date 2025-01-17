@@ -1,0 +1,23 @@
+name: WordPress Plugin Directory review
+description: Feedback on registering a WordPress plugin
+title: ''
+labels: ''
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **List of issues found**
+        - [ ] list of issues
+        - [ ] ...
+
+  - type: input
+    attributes:
+      label: Plugin version
+      description: The version of the plugin you are using.
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
