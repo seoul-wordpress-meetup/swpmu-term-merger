@@ -1,8 +1,5 @@
 name: WordPress Plugin Directory review
 description: Feedback on registering a WordPress plugin
-title: ''
-labels: ''
-assignees: ''
 
 body:
   - type: markdown
