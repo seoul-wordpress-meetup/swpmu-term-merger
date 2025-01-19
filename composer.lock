@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7dd0ba4a2019cb37d0ad0eb985ced1d8",
+    "content-hash": "c318269e45792565a88cec054b141a78",
     "packages": [
         {
             "name": "bojaghi/admin-ajax",
@@ -232,16 +232,16 @@
         },
         {
             "name": "bojaghi/vite-scripts",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bojaghi/vite-scripts.git",
-                "reference": "524030afdc2e4ee36dfe5058e0342331f4c4f07e"
+                "reference": "9f3b4f4b782d73b939f64ebf86bef1adddd2bf8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bojaghi/vite-scripts/zipball/524030afdc2e4ee36dfe5058e0342331f4c4f07e",
-                "reference": "524030afdc2e4ee36dfe5058e0342331f4c4f07e",
+                "url": "https://api.github.com/repos/bojaghi/vite-scripts/zipball/9f3b4f4b782d73b939f64ebf86bef1adddd2bf8d",
+                "reference": "9f3b4f4b782d73b939f64ebf86bef1adddd2bf8d",
                 "shasum": ""
             },
             "require": {
@@ -266,9 +266,9 @@
             "homepage": "https://github.com/bojaghi/vite-scripts",
             "support": {
                 "issues": "https://github.com/bojaghi/vite-scripts/issues",
-                "source": "https://github.com/bojaghi/vite-scripts/tree/1.0.1"
+                "source": "https://github.com/bojaghi/vite-scripts/tree/1.1.0"
             },
-            "time": "2024-12-27T04:20:39+00:00"
+            "time": "2025-01-14T15:56:58+00:00"
         },
         {
             "name": "psr/container",
@@ -322,92 +322,6 @@
                 "source": "https://github.com/php-fig/container/tree/2.0.2"
             },
             "time": "2021-11-05T16:47:00+00:00"
-        },
-        {
-            "name": "typisttech/imposter",
-            "version": "0.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TypistTech/imposter.git",
-                "reference": "f52b1a2289d2ea9c660cf9595085d0b11469af83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TypistTech/imposter/zipball/f52b1a2289d2ea9c660cf9595085d0b11469af83",
-                "reference": "f52b1a2289d2ea9c660cf9595085d0b11469af83",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.3 || ^8.0"
-            },
-            "require-dev": {
-                "codeception/codeception": "^4.1",
-                "codeception/mockery-module": "^0.4.0",
-                "codeception/module-asserts": "^1.3",
-                "codeception/module-filesystem": "^1.0",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "suggest": {
-                "typisttech/imposter-plugin": "Composer plugin to integrate composer and imposter"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TypistTech\\Imposter\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Typist Tech",
-                    "email": "imposter@typist.tech",
-                    "homepage": "https://typist.tech"
-                },
-                {
-                    "name": "Tang Rufus",
-                    "email": "tangrufus@gmail.com",
-                    "homepage": "https://typist.tech",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Wrapping all composer vendor packages inside your own namespace. Intended for WordPress plugins.",
-            "homepage": "https://github.com/TypistTech/imposter",
-            "keywords": [
-                "composer",
-                "dependency",
-                "monkey-patching",
-                "namespace",
-                "wordpress"
-            ],
-            "support": {
-                "email": "imposter@typist.tech",
-                "issues": "https://github.com/TypistTech/imposter/issues",
-                "source": "https://github.com/TypistTech/imposter"
-            },
-            "funding": [
-                {
-                    "url": "https://typist.tech/donation/",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.paypal.me/iAmTangRufus/30usd",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tangrufus",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-12-06T22:57:09+00:00"
         }
     ],
     "packages-dev": [
@@ -2192,17 +2106,103 @@
             "time": "2024-03-03T12:36:25+00:00"
         },
         {
-            "name": "yoast/phpunit-polyfills",
-            "version": "3.0.0",
+            "name": "typisttech/imposter",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Yoast/PHPUnit-Polyfills.git",
-                "reference": "19e6d5fb8aad31f731f774f9646a10c64a8843d2"
+                "url": "https://github.com/TypistTech/imposter.git",
+                "reference": "f52b1a2289d2ea9c660cf9595085d0b11469af83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/19e6d5fb8aad31f731f774f9646a10c64a8843d2",
-                "reference": "19e6d5fb8aad31f731f774f9646a10c64a8843d2",
+                "url": "https://api.github.com/repos/TypistTech/imposter/zipball/f52b1a2289d2ea9c660cf9595085d0b11469af83",
+                "reference": "f52b1a2289d2ea9c660cf9595085d0b11469af83",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.1",
+                "codeception/mockery-module": "^0.4.0",
+                "codeception/module-asserts": "^1.3",
+                "codeception/module-filesystem": "^1.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "suggest": {
+                "typisttech/imposter-plugin": "Composer plugin to integrate composer and imposter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TypistTech\\Imposter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Typist Tech",
+                    "email": "imposter@typist.tech",
+                    "homepage": "https://typist.tech"
+                },
+                {
+                    "name": "Tang Rufus",
+                    "email": "tangrufus@gmail.com",
+                    "homepage": "https://typist.tech",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Wrapping all composer vendor packages inside your own namespace. Intended for WordPress plugins.",
+            "homepage": "https://github.com/TypistTech/imposter",
+            "keywords": [
+                "composer",
+                "dependency",
+                "monkey-patching",
+                "namespace",
+                "wordpress"
+            ],
+            "support": {
+                "email": "imposter@typist.tech",
+                "issues": "https://github.com/TypistTech/imposter/issues",
+                "source": "https://github.com/TypistTech/imposter"
+            },
+            "funding": [
+                {
+                    "url": "https://typist.tech/donation/",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.paypal.me/iAmTangRufus/30usd",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tangrufus",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-06T22:57:09+00:00"
+        },
+        {
+            "name": "yoast/phpunit-polyfills",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yoast/PHPUnit-Polyfills.git",
+                "reference": "e6381c62c4df51677b657fbac79b79dfce7acdab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/e6381c62c4df51677b657fbac79b79dfce7acdab",
+                "reference": "e6381c62c4df51677b657fbac79b79dfce7acdab",
                 "shasum": ""
             },
             "require": {
@@ -2252,17 +2252,17 @@
                 "security": "https://github.com/Yoast/PHPUnit-Polyfills/security/policy",
                 "source": "https://github.com/Yoast/PHPUnit-Polyfills"
             },
-            "time": "2024-09-07T00:24:25+00:00"
+            "time": "2025-01-12T08:41:37+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.0"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
