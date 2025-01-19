@@ -30,7 +30,6 @@ return [
         'bojaghi/viteScript' => \SWM\TermMerger\Vendor\Bojaghi\ViteScripts\ViteScript::class,
         'tmgr/adminMenu'     => Modules\AdminMenu::class,
         'tmgr/ajaxHandler'   => Modules\AjaxHandler::class,
-        'tmgr/translation' => Modules\Translation::class,
     ],
 
     // Arguments
@@ -54,10 +53,5 @@ return [
                 'bojaghi/viteScript',
             ],
         ],
-        'plugins_loaded' => [
-            Continy::PR_DEFAULT => [
-                'tmgr/translation',
-            ]
-        ]
     ],
 ];
