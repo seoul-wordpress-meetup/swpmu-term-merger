@@ -51,5 +51,9 @@ do
   fi
 done
 
-# Remove bojaghi bin, tests
+# Remove bojaghi bin, .dic, tests
 find "$DST/vendor/bojaghi" -maxdepth 2 -type d  \( -name 'bin' -o -name 'tests' \) -exec rm -rf {} \;
+
+# Remove all .dic files
+rm "$DST/custom.dic"
+find "$DST/vendor/bojaghi" -maxdepth 2 -type f -name 'custom.dic' -exec rm {} \;
