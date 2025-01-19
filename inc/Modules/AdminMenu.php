@@ -36,6 +36,7 @@ class AdminMenu implements Module
              */
             $vite
                 ->add('swm-term-merger', 'src/term-merger.tsx')
+                ->scriptTranslation('swpmu-term-merger')
                 ->vars(
                     'swmTermMerger',
                     [
@@ -53,12 +54,12 @@ class AdminMenu implements Module
                         ],
                         'endpoint'     => admin_url('admin-ajax.php'),
                         'initialState' => wp_get_environment_type() === 'production' ? [
-                            'currentStep' => 'taxonomy-select',
+                            'currentStep' => '',
                             'selected'    => [],
                             'taxonomies'  => swmTmgrGet(Taxonomy::class)->getTaxonomies(),
                             'taxonomy'    => '',
                         ] : [
-                            'currentStep' => 'merge-complete',
+                            'currentStep' => 'taxonomy-select',
                             'selected'    => [],
                             'taxonomies'  => swmTmgrGet(Taxonomy::class)->getTaxonomies(),
                             'taxonomy'    => '',
@@ -66,12 +67,6 @@ class AdminMenu implements Module
                     ],
                 )
             ;
-
-            wp_set_script_translations(
-                'swm-term-merger',
-                'swm-term-merger',
-                plugin_dir_path(SWM_TERM_MERGER_MAIN) . 'languages',
-            );
         }
     }
 }
