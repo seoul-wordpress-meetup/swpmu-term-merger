@@ -125,7 +125,7 @@ export default function Step3_MergeSelect() {
                                 const message =
                                     __('[Last Confirmation]', 'swm-term-merger') + '\n' +
                                     sprintf(
-                                        /* translaters: '$d': numer of terms, '%s': term name string */
+                                        /* translators: '$d': number of terms, '%s': term name string */
                                         _n(
                                             'Selected %1$d term will be merged into %2$s.',
                                             'Selected %1$d terms will be merged into %2$s.',
