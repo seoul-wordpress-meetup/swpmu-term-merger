@@ -2,6 +2,7 @@ import {Card, CardBody, CardFooter, CardHeader, CardHeaderLabel} from '@/compone
 import ComponentContainer from '@/components/ui/ComponentContainer.tsx'
 import {useGlobalContext} from '@/term-merger/context.tsx'
 import {ActionType} from '@/term-merger/reducer.ts'
+import {__} from '@wordpress/i18n'
 
 export default function Step4_Complete() {
     const {
@@ -13,7 +14,7 @@ export default function Step4_Complete() {
             <Card>
                 <CardHeader>
                     <CardHeaderLabel>
-                        병합 완료
+                        {__('Complete', 'swpmu-term-merger')}
                     </CardHeaderLabel>
                 </CardHeader>
                 <CardBody>
@@ -21,7 +22,9 @@ export default function Step4_Complete() {
                         <p className="sw-m-0">
                             <span className="dashicons dashicons-thumbs-up sw-text-6xl sw-w-full sw-h-full" />
                         </p>
-                        <p className="sw-mt-3 sw-mb-0 sw-text-xl">병합이 완료되었습니다!</p>
+                        <p className="sw-mt-3 sw-mb-0 sw-text-xl">
+                            {__('Term merge is complete.', 'swpmu-term-merger')}
+                        </p>
                     </div>
                 </CardBody>
                 <CardFooter>
@@ -35,7 +38,7 @@ export default function Step4_Complete() {
                                 })
                             }}
                         >
-                            처음으로
+                            {__('Back', 'swpmu-term-merger')}
                         </button>
                     </div>
                 </CardFooter>
