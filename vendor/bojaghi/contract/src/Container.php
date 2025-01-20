@@ -1,8 +1,8 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\Contract;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\Contract;
 
-use SWM\TermMerger\Vendor\Psr\Container\ContainerInterface;
+use SWPMU\TermMerger\Vendor\Psr\Container\ContainerInterface;
 
 interface Container extends ContainerInterface
 {

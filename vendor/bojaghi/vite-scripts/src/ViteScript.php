@@ -1,8 +1,8 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\ViteScripts;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\ViteScripts;
 
-use SWM\TermMerger\Vendor\Bojaghi\Helper\Helper;
+use SWPMU\TermMerger\Vendor\Bojaghi\Helper\Helper;
 use InvalidArgumentException;
 
 class ViteScript

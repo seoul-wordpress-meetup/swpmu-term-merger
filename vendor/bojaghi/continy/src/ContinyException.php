@@ -1,9 +1,9 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\Continy;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\Continy;
 
 use Exception;
-use SWM\TermMerger\Vendor\Psr\Container\ContainerExceptionInterface;
+use SWPMU\TermMerger\Vendor\Psr\Container\ContainerExceptionInterface;
 
 class ContinyException extends Exception implements ContainerExceptionInterface
 {

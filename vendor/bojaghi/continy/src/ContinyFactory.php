@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SWM\TermMerger\Vendor\Bojaghi\Continy;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\Continy;
 
 class ContinyFactory
 {

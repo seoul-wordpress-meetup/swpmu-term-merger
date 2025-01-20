@@ -1,6 +1,6 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\Contract;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\Contract;
 
 interface Support
 {
