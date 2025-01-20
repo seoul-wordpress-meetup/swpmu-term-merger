@@ -1,12 +1,12 @@
 <?php
 // global namespace
 
-use SWM\TermMerger\Vendor\Bojaghi\Continy\Continy;
-use SWM\TermMerger\Vendor\Bojaghi\Continy\ContinyException;
-use SWM\TermMerger\Vendor\Bojaghi\Continy\ContinyFactory;
-use SWM\TermMerger\Vendor\Bojaghi\Continy\ContinyNotFoundException;
+use SWPMU\TermMerger\Vendor\Bojaghi\Continy\Continy;
+use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyException;
+use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyFactory;
+use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyNotFoundException;
 
-const SWM_TMGR_NS_PREFIX = 'SWM\\TermMerger\\Vendor\\';
+const SWPMU_TMGR_NS_PREFIX = 'SWPMU\\TermMerger\\Vendor\\';
 
 if (!function_exists('strPascalToKebab')) {
     function strPascalToKebab(string $input): string
@@ -15,11 +15,11 @@ if (!function_exists('strPascalToKebab')) {
     }
 }
 
-if (!function_exists('swmTmgrAutoloader')) {
-    function swmTmgrAutoloader(string $className): bool
+if (!function_exists('swpmuAutoloader')) {
+    function swpmuAutoloader(string $className): bool
     {
-        if (str_starts_with($className, SWM_TMGR_NS_PREFIX)) {
-            $origin   = substr($className, strlen(SWM_TMGR_NS_PREFIX));
+        if (str_starts_with($className, SWPMU_TMGR_NS_PREFIX)) {
+            $origin   = substr($className, strlen(SWPMU_TMGR_NS_PREFIX));
             $exploded = explode('\\', $origin);
 
             if (count($exploded)) {
@@ -44,13 +44,13 @@ if (!function_exists('swmTmgrAutoloader')) {
     }
 }
 
-if (!function_exists('swmTmgr')) {
+if (!function_exists('swpmuTmgr')) {
     /**
      * Wrapper function
      *
      * @return Continy
      */
-    function swmTmgr(): Continy
+    function swpmuTmgr(): Continy
     {
         static $continy = null;
 
@@ -62,17 +62,17 @@ if (!function_exists('swmTmgr')) {
     }
 }
 
-if (!function_exists('swmTmgrGet')) {
+if (!function_exists('swpmuTmgrGet')) {
     /**
      * @template T
      * @param class-string<T> $id
      *
      * @return T|object|null
      */
-    function swmTmgrGet(string $id)
+    function swpmuTmgrGet(string $id)
     {
         try {
-            $instance = swmTmgr()->get($id);
+            $instance = swpmuTmgr()->get($id);
         } catch (ContinyException|ContinyNotFoundException $e) {
             $instance = null;
         }

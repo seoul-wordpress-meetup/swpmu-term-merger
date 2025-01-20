@@ -1,8 +1,8 @@
 <?php
 
-namespace SWM\TermMerger\Supports;
+namespace SWPMU\TermMerger\Supports;
 
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Support;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Support;
 use WP_Term;
 
 class TermMerger implements Support

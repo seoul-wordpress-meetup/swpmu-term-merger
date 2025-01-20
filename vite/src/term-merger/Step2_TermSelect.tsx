@@ -23,12 +23,12 @@ export default function Step2_TermSelect() {
             <Card>
                 <CardHeader>
                     <CardHeaderLabel>
-                        {__('Step 2/3: Term Selection', 'swm-term-merger')}
+                        {__('Step 2/3: Term Selection', 'swpmu-term-merger')}
                     </CardHeaderLabel>
                 </CardHeader>
                 <CardBody>
                     <CardBodyDescription className="">
-                        {__('Please choose two or more terms to merge.', 'swm-term-merger')}
+                        {__('Please choose two or more terms to merge.', 'swpmu-term-merger')}
                     </CardBodyDescription>
                     <RenderQueryResult query={query}>
                         <ul className="sw-flex sw-flex-wrap sw-m-0 sw-p-0">
@@ -57,7 +57,7 @@ export default function Step2_TermSelect() {
                                 })
                             }}
                         >
-                            &laquo; {__('Previous Step', 'swm-term-merger')}
+                            &laquo; {__('Previous Step', 'swpmu-term-merger')}
                         </button>
                         <button
                             className="button button-primary button-hero"
@@ -69,7 +69,7 @@ export default function Step2_TermSelect() {
                                 })
                             }}
                         >
-                            {__('Merge Selection', 'swm-term-merger')} &raquo;
+                            {__('Merge Selection', 'swpmu-term-merger')} &raquo;
                         </button>
                     </div>
                 </CardFooter>

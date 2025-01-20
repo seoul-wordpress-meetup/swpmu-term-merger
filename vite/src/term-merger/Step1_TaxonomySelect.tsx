@@ -18,22 +18,22 @@ export default function Step1_TaxonomySelect() {
             <Card>
                 <CardHeader>
                     <CardHeaderLabel>
-                        {__('Step 1/3: Choose Taxonomy', 'swm-term-merger')}
+                        {__('Step 1/3: Choose Taxonomy', 'swpmu-term-merger')}
                     </CardHeaderLabel>
                 </CardHeader>
                 <CardBody>
                     <p className="sw-m-0">
-                        {__('Choose a taxonomy to merge: ', 'swm-term-merger')}
+                        {__('Choose a taxonomy to merge: ', 'swpmu-term-merger')}
                     </p>
                     <p className="sw-mt-2 sw-mb-0 sw-min-w-48">
                         <label
                             className="screen-reader-text"
-                            htmlFor="swm-tmgr-taxonomy-select"
+                            htmlFor="swpmu-tmgr-taxonomy-select"
                         >
-                            {__('Taxonomy Selection', 'swm-term-merger')}
+                            {__('Taxonomy Selection', 'swpmu-term-merger')}
                         </label>
                         <select
-                            id="swm-tmgr-taxonomy-select"
+                            id="swpmu-tmgr-taxonomy-select"
                             className="sw-w-content"
                             onChange={(e) => dispatch({
                                 type: ActionType.SET_TAXONOMY,
@@ -42,7 +42,7 @@ export default function Step1_TaxonomySelect() {
                             value={taxonomy}
                         >
                             <option value={''} disabled={true}>
-                                {__('Choolse Taxonomy', 'swm-term-merger')}
+                                {__('Choolse Taxonomy', 'swpmu-term-merger')}
                             </option>
                             {Object.entries(taxonomies).map(([key, value]) => (
                                 <option key={key} value={key}>{value}</option>
@@ -63,7 +63,7 @@ export default function Step1_TaxonomySelect() {
                             }}
                             type="button"
                         >
-                            {__('Select Term', 'swm-term-merger')} &raquo;
+                            {__('Select Term', 'swpmu-term-merger')} &raquo;
                         </button>
                     </div>
                 </CardFooter>

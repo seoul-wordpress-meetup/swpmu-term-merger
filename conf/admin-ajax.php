@@ -5,7 +5,7 @@
  * @noinspection PhpClassConstantAccessedViaChildClassInspection
  */
 
-use SWM\TermMerger\Vendor\Bojaghi\AdminAjax\AdminAjax;
+use SWPMU\TermMerger\Vendor\Bojaghi\AdminAjax\AdminAjax;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -22,14 +22,14 @@ return [
     /**
      * Get terms (by taxonomy)
      *
-     * @uses \SWM\TermMerger\Modules\AjaxHandler::getTerms()
+     * @uses \SWPMU\TermMerger\Modules\AjaxHandler::getTerms()
      */
-    ['swmTmgr/getTerms', 'tmgr/ajaxHandler@getTerms', AdminAjax::ONLY_PRIV, '_swm_tmgr_nonce'],
+    ['swpmu/getTerms', 'tmgr/ajaxHandler@getTerms', AdminAjax::ONLY_PRIV, '_swpmu_nonce'],
 
     /**
      * Execute term merge
      *
-     * @uses \SWM\TermMerger\Modules\AjaxHandler::mergeTerms()
+     * @uses \SWPMU\TermMerger\Modules\AjaxHandler::mergeTerms()
      */
-    ['swmTmgr/mergeTerms', 'tmgr/ajaxHandler@mergeTerms', AdminAjax::ONLY_PRIV, '_swm_tmgr_nonce'],
+    ['swpmu/mergeTerms', 'tmgr/ajaxHandler@mergeTerms', AdminAjax::ONLY_PRIV, '_swpmu_nonce'],
 ];

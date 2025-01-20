@@ -1,17 +1,17 @@
 {
-  "name": "swm/term-merger",
+  "name": "swpmu/term-merger",
   "description": "Term merger plugin for WordPress",
-  "homepage": "https://github.com/seoul-wordpress-meetup/swm-term-merger",
+  "homepage": "https://github.com/seoul-wordpress-meetup/swpmu-term-merger",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "autoload": {
     "psr-4": {
-      "SWM\\TermMerger\\": "inc/"
+      "SWPMU\\TermMerger\\": "inc/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "SWM\\TermMerger\\Tests\\": "tests/"
+      "SWPMU\\TermMerger\\Tests\\": "tests/"
     }
   },
   "authors": [
@@ -23,7 +23,7 @@
   ],
   "extra": {
     "imposter": {
-      "namespace": "SWM\\TermMerger\\Vendor",
+      "namespace": "SWPMU\\TermMerger\\Vendor",
       "excludes": [
         "bin",
         "doctrine",
@@ -58,7 +58,8 @@
       "@composer run make-json"
     ],
     "daa": "@composer dump-autoload --classmap-authoritative --no-dev",
-    "make-pot": "@php -dxdebug.mode=off $(which wp) i18n make-pot . ./languages/swm-term-merger.pot --include=inc,dist/assets",
+    "imposter": "@php imposter.php",
+    "make-pot": "@php -dxdebug.mode=off $(which wp) i18n make-pot . ./languages/swpmu-term-merger.pot --include=inc,dist/assets",
     "make-json": "@php -dxdebug.mode=off $(which wp) i18n make-json ./languages --no-purge",
     "wp-tests": [
       "@wp-tests:setenv",
@@ -89,7 +90,7 @@
   },
   "scripts-descriptions": {
     "daa": "Run `composer dump-autoload --classmap-authoritative --no-dev`.",
-    "make-pot": "Create ./languages/swm-term-merger.pot file. WP-CLI is required.",
+    "make-pot": "Create ./languages/swpmu-term-merger.pot file. WP-CLI is required.",
     "make-json": "Create JSON language files. WP-CLI is required."
   }
 }

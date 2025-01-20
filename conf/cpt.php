@@ -3,7 +3,7 @@
  * Custom posts configuration.
  */
 
-use SWM\TermMerger\Supports\Workspace;
+use SWPMU\TermMerger\Supports\Workspace;
 
 if (!defined('ABSPATH')) {
     exit;

@@ -1,6 +1,6 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Psr\Container;
+namespace SWPMU\TermMerger\Vendor\Psr\Container;
 
 use Throwable;
 

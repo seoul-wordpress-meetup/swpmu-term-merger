@@ -7,13 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit7dd0ba4a2019cb37d0ad0eb985ced1d8
 {
     public static $prefixLengthsPsr4 = array (
-        'T' => 
-        array (
-            'TypistTech\\Imposter\\' => 20,
-        ),
         'S' => 
         array (
-            'SWM\\TermMerger\\' => 15,
+            'SWPMU\\TermMerger\\' => 17,
         ),
         'P' => 
         array (
@@ -31,11 +27,7 @@ class ComposerStaticInit7dd0ba4a2019cb37d0ad0eb985ced1d8
     );
 
     public static $prefixDirsPsr4 = array (
-        'TypistTech\\Imposter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/typisttech/imposter/src',
-        ),
-        'SWM\\TermMerger\\' => 
+        'SWPMU\\TermMerger\\' => 
         array (
             0 => __DIR__ . '/../..' . '/inc',
         ),
@@ -71,29 +63,11 @@ class ComposerStaticInit7dd0ba4a2019cb37d0ad0eb985ced1d8
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'SWM\\TermMerger\\Modules\\AdminMenu' => __DIR__ . '/../..' . '/inc/Modules/AdminMenu.php',
-        'SWM\\TermMerger\\Modules\\AjaxHandler' => __DIR__ . '/../..' . '/inc/Modules/AjaxHandler.php',
-        'SWM\\TermMerger\\Modules\\Translation' => __DIR__ . '/../..' . '/inc/Modules/Translation.php',
-        'SWM\\TermMerger\\Supports\\Taxonomy' => __DIR__ . '/../..' . '/inc/Supports/Taxonomy.php',
-        'SWM\\TermMerger\\Supports\\TermMerger' => __DIR__ . '/../..' . '/inc/Supports/TermMerger.php',
-        'SWM\\TermMerger\\Supports\\Workspace' => __DIR__ . '/../..' . '/inc/Supports/Workspace.php',
-        'TypistTech\\Imposter\\ArrayUtil' => __DIR__ . '/..' . '/typisttech/imposter/src/ArrayUtil.php',
-        'TypistTech\\Imposter\\Config' => __DIR__ . '/..' . '/typisttech/imposter/src/Config.php',
-        'TypistTech\\Imposter\\ConfigCollection' => __DIR__ . '/..' . '/typisttech/imposter/src/ConfigCollection.php',
-        'TypistTech\\Imposter\\ConfigCollectionFactory' => __DIR__ . '/..' . '/typisttech/imposter/src/ConfigCollectionFactory.php',
-        'TypistTech\\Imposter\\ConfigCollectionInterface' => __DIR__ . '/..' . '/typisttech/imposter/src/ConfigCollectionInterface.php',
-        'TypistTech\\Imposter\\ConfigFactory' => __DIR__ . '/..' . '/typisttech/imposter/src/ConfigFactory.php',
-        'TypistTech\\Imposter\\ConfigInterface' => __DIR__ . '/..' . '/typisttech/imposter/src/ConfigInterface.php',
-        'TypistTech\\Imposter\\Filesystem' => __DIR__ . '/..' . '/typisttech/imposter/src/Filesystem.php',
-        'TypistTech\\Imposter\\FilesystemInterface' => __DIR__ . '/..' . '/typisttech/imposter/src/FilesystemInterface.php',
-        'TypistTech\\Imposter\\Imposter' => __DIR__ . '/..' . '/typisttech/imposter/src/Imposter.php',
-        'TypistTech\\Imposter\\ImposterFactory' => __DIR__ . '/..' . '/typisttech/imposter/src/ImposterFactory.php',
-        'TypistTech\\Imposter\\ImposterInterface' => __DIR__ . '/..' . '/typisttech/imposter/src/ImposterInterface.php',
-        'TypistTech\\Imposter\\ProjectConfig' => __DIR__ . '/..' . '/typisttech/imposter/src/ProjectConfig.php',
-        'TypistTech\\Imposter\\ProjectConfigInterface' => __DIR__ . '/..' . '/typisttech/imposter/src/ProjectConfigInterface.php',
-        'TypistTech\\Imposter\\StringUtil' => __DIR__ . '/..' . '/typisttech/imposter/src/StringUtil.php',
-        'TypistTech\\Imposter\\Transformer' => __DIR__ . '/..' . '/typisttech/imposter/src/Transformer.php',
-        'TypistTech\\Imposter\\TransformerInterface' => __DIR__ . '/..' . '/typisttech/imposter/src/TransformerInterface.php',
+        'SWPMU\\TermMerger\\Modules\\AdminMenu' => __DIR__ . '/../..' . '/inc/Modules/AdminMenu.php',
+        'SWPMU\\TermMerger\\Modules\\AjaxHandler' => __DIR__ . '/../..' . '/inc/Modules/AjaxHandler.php',
+        'SWPMU\\TermMerger\\Supports\\Taxonomy' => __DIR__ . '/../..' . '/inc/Supports/Taxonomy.php',
+        'SWPMU\\TermMerger\\Supports\\TermMerger' => __DIR__ . '/../..' . '/inc/Supports/TermMerger.php',
+        'SWPMU\\TermMerger\\Supports\\Workspace' => __DIR__ . '/../..' . '/inc/Supports/Workspace.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -241,17 +241,17 @@
         },
         {
             "name": "bojaghi/vite-scripts",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bojaghi/vite-scripts.git",
-                "reference": "524030afdc2e4ee36dfe5058e0342331f4c4f07e"
+                "reference": "9f3b4f4b782d73b939f64ebf86bef1adddd2bf8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bojaghi/vite-scripts/zipball/524030afdc2e4ee36dfe5058e0342331f4c4f07e",
-                "reference": "524030afdc2e4ee36dfe5058e0342331f4c4f07e",
+                "url": "https://api.github.com/repos/bojaghi/vite-scripts/zipball/9f3b4f4b782d73b939f64ebf86bef1adddd2bf8d",
+                "reference": "9f3b4f4b782d73b939f64ebf86bef1adddd2bf8d",
                 "shasum": ""
             },
             "require": {
@@ -263,7 +263,7 @@
                 "phpunit/phpunit": "^9",
                 "yoast/phpunit-polyfills": "^3.0"
             },
-            "time": "2024-12-27T04:20:39+00:00",
+            "time": "2025-01-14T15:56:58+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -278,7 +278,7 @@
             "homepage": "https://github.com/bojaghi/vite-scripts",
             "support": {
                 "issues": "https://github.com/bojaghi/vite-scripts/issues",
-                "source": "https://github.com/bojaghi/vite-scripts/tree/1.0.1"
+                "source": "https://github.com/bojaghi/vite-scripts/tree/1.1.0"
             },
             "install-path": "../bojaghi/vite-scripts"
         },
@@ -2296,17 +2296,17 @@
         },
         {
             "name": "yoast/phpunit-polyfills",
-            "version": "3.0.0",
-            "version_normalized": "3.0.0.0",
+            "version": "3.1.1",
+            "version_normalized": "3.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/PHPUnit-Polyfills.git",
-                "reference": "19e6d5fb8aad31f731f774f9646a10c64a8843d2"
+                "reference": "e6381c62c4df51677b657fbac79b79dfce7acdab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/19e6d5fb8aad31f731f774f9646a10c64a8843d2",
-                "reference": "19e6d5fb8aad31f731f774f9646a10c64a8843d2",
+                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/e6381c62c4df51677b657fbac79b79dfce7acdab",
+                "reference": "e6381c62c4df51677b657fbac79b79dfce7acdab",
                 "shasum": ""
             },
             "require": {
@@ -2318,7 +2318,7 @@
                 "php-parallel-lint/php-parallel-lint": "^1.4.0",
                 "yoast/yoastcs": "^3.1.0"
             },
-            "time": "2024-09-07T00:24:25+00:00",
+            "time": "2025-01-12T08:41:37+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2392,6 +2392,7 @@
         "sebastian/type",
         "sebastian/version",
         "theseer/tokenizer",
+        "typisttech/imposter",
         "yoast/phpunit-polyfills"
     ]
 }

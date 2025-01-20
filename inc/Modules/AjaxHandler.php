@@ -1,12 +1,12 @@
 <?php
 
-namespace SWM\TermMerger\Modules;
+namespace SWPMU\TermMerger\Modules;
 
-use SWM\TermMerger\Supports\Taxonomy;
-use SWM\TermMerger\Supports\TermMerger;
-use SWM\TermMerger\Vendor\Bojaghi\Continy\Continy;
-use SWM\TermMerger\Vendor\Bojaghi\Continy\ContinyException;
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Module;
+use SWPMU\TermMerger\Supports\Taxonomy;
+use SWPMU\TermMerger\Supports\TermMerger;
+use SWPMU\TermMerger\Vendor\Bojaghi\Continy\Continy;
+use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyException;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Module;
 
 class AjaxHandler implements Module
 {
@@ -19,7 +19,7 @@ class AjaxHandler implements Module
      */
     public function getTaxonomies(): void
     {
-        check_ajax_referer('swmTmgr/getTaxonomies', '_swm_tmgr_nonce');
+        check_ajax_referer('swpmu/getTaxonomies', '_swpmu_nonce');
 
         $taxonomies = $this->continy->get(Taxonomy::class)->getTaxonomies();
 
@@ -31,7 +31,7 @@ class AjaxHandler implements Module
      */
     public function getTerms(): void
     {
-        check_ajax_referer('swmTmgr/getTerms', '_swm_tmgr_nonce');
+        check_ajax_referer('swpmu/getTerms', '_swpmu_nonce');
 
         $taxonomy = sanitize_key($_REQUEST['taxonomy'] ?? '');
         $terms    = $this->continy->get(Taxonomy::class)->getTerms($taxonomy);
@@ -54,7 +54,7 @@ class AjaxHandler implements Module
      */
     public function mergeTerms(): void
     {
-        check_ajax_referer('swmTmgr/mergeTerms', '_swm_tmgr_nonce');
+        check_ajax_referer('swpmu/mergeTerms', '_swpmu_nonce');
 
         $error    = new \WP_Error();
         $head     = absint($_REQUEST['head'] ?? '0');

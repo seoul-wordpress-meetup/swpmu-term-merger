@@ -22,7 +22,7 @@ export default function RenderQueryResult(props: Props) {
         } else {
             return (
                 <p className="sw-builtin-loading">
-                    {__('Loaing now...', 'swm-term-merger')}
+                    {__('Loaing now...', 'swpmu-term-merger')}
                 </p>
             )
         }
@@ -34,7 +34,7 @@ export default function RenderQueryResult(props: Props) {
         } else {
             return (
                 <p className="sw-builtin-error">
-                    {__('Error: ', 'swm-term-merger')}
+                    {__('Error: ', 'swpmu-term-merger')}
                     {query.error.message}
                 </p>
             )

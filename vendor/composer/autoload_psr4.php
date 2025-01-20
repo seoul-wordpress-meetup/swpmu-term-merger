@@ -6,8 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'TypistTech\\Imposter\\' => array($vendorDir . '/typisttech/imposter/src'),
-    'SWM\\TermMerger\\' => array($baseDir . '/inc'),
+    'SWPMU\\TermMerger\\' => array($baseDir . '/inc'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Bojaghi\\ViteScripts\\' => array($vendorDir . '/bojaghi/vite-scripts/src'),
     'Bojaghi\\Helper\\' => array($vendorDir . '/bojaghi/helper/src'),
