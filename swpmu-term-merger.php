@@ -9,11 +9,11 @@
  * Requires PHP:      8.0
  * Textdomain:        swpmu-term-merger
  * License:           GPL-v2-or-later
- * Version:           0.9.0
+ * Version:           0.9.1
  */
 
 const SWPMU_TERM_MERGER_MAIN    = __FILE__;
-const SWPMU_TERM_MERGER_VERSION = '0.9.0';
+const SWPMU_TERM_MERGER_VERSION = '0.9.1';
 
 // Call autoloader earlier than composer autoload.
 require_once __DIR__ . '/inc/functions.php';
