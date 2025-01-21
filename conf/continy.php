@@ -17,19 +17,18 @@ return [
 
     // Hooks
     'hooks'     => [
-        'admin_menu'     => 0,
-        'init'           => 0,
-        'plugins_loaded' => 0,
+        'admin_menu' => 0,
+        'init'       => 0,
     ],
 
     // Binding
     'bindings'  => [
-        CIFace::class        => Continy::class,
-        'bojaghi/adminAjax'  => \SWPMU\TermMerger\Vendor\Bojaghi\AdminAjax\AdminAjax::class,
-        'bojaghi/cpt'        => \SWPMU\TermMerger\Vendor\Bojaghi\Cpt\CustomPosts::class,
-        'bojaghi/viteScript' => \SWPMU\TermMerger\Vendor\Bojaghi\ViteScripts\ViteScript::class,
-        'tmgr/adminMenu'     => Modules\AdminMenu::class,
-        'tmgr/ajaxHandler'   => Modules\AjaxHandler::class,
+        CIFace::class           => Continy::class,
+        'bojaghi/adminAjax'     => \SWPMU\TermMerger\Vendor\Bojaghi\AdminAjax\AdminAjax::class,
+        'bojaghi/cpt'           => \SWPMU\TermMerger\Vendor\Bojaghi\Cpt\CustomPosts::class,
+        'bojaghi/viteScript'    => \SWPMU\TermMerger\Vendor\Bojaghi\ViteScripts\ViteScript::class,
+        'swpmuTmgr/adminMenu'   => Modules\AdminMenu::class,
+        'swpmuTmgr/ajaxHandler' => Modules\AjaxHandler::class,
     ],
 
     // Arguments
@@ -43,7 +42,7 @@ return [
     'modules'   => [
         'admin_menu' => [
             Continy::PR_LAZY => [
-                'tmgr/adminMenu',
+                'swpmuTmgr/adminMenu',
             ]
         ],
         'init'       => [

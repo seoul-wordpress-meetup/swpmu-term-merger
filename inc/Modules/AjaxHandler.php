@@ -19,7 +19,7 @@ class AjaxHandler implements Module
      */
     public function getTaxonomies(): void
     {
-        check_ajax_referer('swpmu/getTaxonomies', '_swpmu_nonce');
+        check_ajax_referer('swpmuTmgr/getTaxonomies', '_swpmu_tmgr_nonce');
 
         $taxonomies = $this->continy->get(Taxonomy::class)->getTaxonomies();
 
@@ -31,7 +31,7 @@ class AjaxHandler implements Module
      */
     public function getTerms(): void
     {
-        check_ajax_referer('swpmu/getTerms', '_swpmu_nonce');
+        check_ajax_referer('swpmuTmgr/getTerms', '_swpmu_tmgr_nonce');
 
         $taxonomy = sanitize_key($_REQUEST['taxonomy'] ?? '');
         $terms    = $this->continy->get(Taxonomy::class)->getTerms($taxonomy);
@@ -54,7 +54,7 @@ class AjaxHandler implements Module
      */
     public function mergeTerms(): void
     {
-        check_ajax_referer('swpmu/mergeTerms', '_swpmu_nonce');
+        check_ajax_referer('swpmuTmgr/mergeTerms', '_swpmu_tmgr_nonce');
 
         $error    = new \WP_Error();
         $head     = absint($_REQUEST['head'] ?? '0');

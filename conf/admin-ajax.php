@@ -24,12 +24,22 @@ return [
      *
      * @uses \SWPMU\TermMerger\Modules\AjaxHandler::getTerms()
      */
-    ['swpmu/getTerms', 'tmgr/ajaxHandler@getTerms', AdminAjax::ONLY_PRIV, '_swpmu_nonce'],
+    [
+        'swpmuTmgr/getTerms',
+        'swpmuTmgr/ajaxHandler@getTerms',
+        AdminAjax::ONLY_PRIV,
+        '_swpmu_tmgr_nonce',
+    ],
 
     /**
      * Execute term merge
      *
      * @uses \SWPMU\TermMerger\Modules\AjaxHandler::mergeTerms()
      */
-    ['swpmu/mergeTerms', 'tmgr/ajaxHandler@mergeTerms', AdminAjax::ONLY_PRIV, '_swpmu_nonce'],
+    [
+        'swpmuTmgr/mergeTerms',
+        'swpmuTmgr/ajaxHandler@mergeTerms',
+        AdminAjax::ONLY_PRIV,
+        '_swpmu_tmgr_nonce',
+    ],
 ];

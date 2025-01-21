@@ -42,14 +42,14 @@ class AdminMenu implements Module
                     [
                         'actions'      => [
                             'getTerms'   => [
-                                'action' => 'swpmu/getTerms',
-                                'key'    => '_swpmu_nonce',
-                                'nonce'  => wp_create_nonce('swpmu/getTerms'),
+                                'action' => 'swpmuTmgr/getTerms',
+                                'key'    => '_swpmu_tmgr_nonce',
+                                'nonce'  => wp_create_nonce('swpmuTmgr/getTerms'),
                             ],
                             'mergeTerms' => [
-                                'action' => 'swpmu/mergeTerms',
-                                'key'    => '_swpmu_nonce',
-                                'nonce'  => wp_create_nonce('swpmu/mergeTerms'),
+                                'action' => 'swpmuTmgr/mergeTerms',
+                                'key'    => '_swpmu_tmgr_nonce',
+                                'nonce'  => wp_create_nonce('swpmuTmgr/mergeTerms'),
                             ],
                         ],
                         'endpoint'     => admin_url('admin-ajax.php'),
