@@ -16,7 +16,7 @@ type AjaxResponse<T> =
 /**
  * T: initial type
  */
-type RootProps<T extends {} = {}> = {
+type RootProps<T extends object = object> = {
     initialState: T
 }
 
