@@ -6,10 +6,11 @@ if [ $# -lt 1 ]; then
 fi
 
 SRC=$(dirname "$(dirname "$(readlink -f "$0")")")
-DST=$(readlink -f "$1")
+TAR=$(readlink -f "$1")
+DST="$TAR/swpmu-term-merger"
 
-if [ -e "$DST" ]; then
-  echo "Destination path exists."
+if [ "$SRC" == "TAR" ]; then
+  echo "DST equals to SRC."
   exit 1
 fi
 
@@ -28,6 +29,7 @@ ITEMS=(
   'vite/package.json'
   'vite/pnpm-lock.yaml'
   'vite/postcss.config.js'
+  'vite/tailwind.config.js'
   'vite/tsconfig.app.json'
   'vite/tsconfig.json'
   'vite/tsconfig.node.json'
@@ -37,6 +39,7 @@ ITEMS=(
   'index.php'
   'LICENSE'
   'readme.txt'
+  'swpmu-term-merger.php'
 )
 
 for ITEM in "${ITEMS[@]}"
@@ -51,9 +54,8 @@ do
   fi
 done
 
-# Remove bojaghi bin, .dic, tests
+# Remove bojaghi bin, tests
 find "$DST/vendor/bojaghi" -maxdepth 2 -type d  \( -name 'bin' -o -name 'tests' \) -exec rm -rf {} \;
 
-# Remove all .dic files
-rm "$DST/custom.dic"
+# Remove all .dic files under bojaghi
 find "$DST/vendor/bojaghi" -maxdepth 2 -type f -name 'custom.dic' -exec rm {} \;
