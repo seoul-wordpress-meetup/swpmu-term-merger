@@ -54,10 +54,7 @@ class AdminMenu implements Module
                         ],
                         'endpoint'     => admin_url('admin-ajax.php'),
                         'initialState' => wp_get_environment_type() === 'production' ? [
-                            'currentStep' => '',
-                            'selected'    => [],
-                            'taxonomies'  => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
-                            'taxonomy'    => '',
+                            'taxonomies' => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
                         ] : [
                             'currentStep' => 'taxonomy-select',
                             'selected'    => [],
