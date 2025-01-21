@@ -19,7 +19,7 @@ const SWPMU_TERM_MERGER_VERSION = '0.9.1';
 require_once __DIR__ . '/inc/functions.php';
 spl_autoload_register('swpmuAutoloader');
 
-require_once __dir__ . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 if (!defined('ABSPATH')) {
     exit;
