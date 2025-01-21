@@ -76,13 +76,13 @@ export default function Step3_MergeSelect() {
             <Card>
                 <CardHeader>
                     <CardHeaderLabel>
-                        {__('Step 3/3: Merge Selection', 'swm-term-merger')}
+                        {__('Step 3/3: Merge Selection', 'swpmu-term-merger')}
                     </CardHeaderLabel>
                 </CardHeader>
                 <CardBody>
                     <RenderQueryResult query={query}>
                         <CardBodyDescription className="sw-mb-4">
-                            {__('Please choolse a head term from the term list below. All the other terms will be merged into it.', 'swm-term-merger')}
+                            {__('Please choolse a head term from the term list below. All the other terms will be merged into it.', 'swpmu-term-merger')}
                         </CardBodyDescription>
                         <ul className="sw-m-0 sw-p-0">
                             {selectedTerms.map((term) => (
@@ -100,7 +100,7 @@ export default function Step3_MergeSelect() {
                                 type="checkbox"
                             />
                             <label htmlFor="confirm-merge-checkbox">
-                                {__('I have backup my database. I am ready to merge terms.', 'swm-term-merger')}
+                                {__('I have backup my database. I am ready to merge terms.', 'swpmu-term-merger')}
                             </label>
                         </CardBodyDescription>
                     </RenderQueryResult>
@@ -116,26 +116,26 @@ export default function Step3_MergeSelect() {
                                 })
                             }}
                         >
-                            &laquo; {__('Previous Step', 'swm-term-merger')}
+                            &laquo; {__('Previous Step', 'swpmu-term-merger')}
                         </button>
                         <button
                             className="button button-primary button-hero"
                             disabled={!(head > 0 && selected.size > 1 && selected.has(head) && ready)}
                             onClick={() => {
                                 const message =
-                                    __('[Last Confirmation]', 'swm-term-merger') + '\n' +
+                                    __('[Last Confirmation]', 'swpmu-term-merger') + '\n' +
                                     sprintf(
                                         /* translators: '$d': number of terms, '%s': term name string */
                                         _n(
                                             'Selected %1$d term will be merged into %2$s.',
                                             'Selected %1$d terms will be merged into %2$s.',
                                             selectedTerms.length - 1,
-                                            'swm-term-merger',
+                                            'swpmu-term-merger',
                                         ),
                                         selectedTerms.length - 1,
                                         headTerm!.name,
                                     ) + '\n' +
-                                    __('Are you sure?', 'swm-term-merger')
+                                    __('Are you sure?', 'swpmu-term-merger')
 
                                 if (!confirm(message)) {
                                     return false
@@ -143,7 +143,7 @@ export default function Step3_MergeSelect() {
                                 mergeTerms()
                             }}
                         >
-                            {__('Proceed', 'swm-term-merger')} &raquo;
+                            {__('Proceed', 'swpmu-term-merger')} &raquo;
                         </button>
                     </div>
                 </CardFooter>
@@ -172,7 +172,7 @@ const SingleTerm = ({term}: { term: Term }) => {
                 }
             }}
         >
-            {isHead && <>{__('Head', 'swm-term-merger')} &raquo;{' '}</>}
+            {isHead && <>{__('Head', 'swpmu-term-merger')} &raquo;{' '}</>}
             {term.name}
         </TermBox>
     )

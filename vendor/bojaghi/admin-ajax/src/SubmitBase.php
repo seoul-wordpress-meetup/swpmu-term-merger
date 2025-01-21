@@ -1,12 +1,12 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\AdminAjax;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\AdminAjax;
 
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Container as ContinyContainer;
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Module;
-use SWM\TermMerger\Vendor\Bojaghi\Helper\Helper;
-use SWM\TermMerger\Vendor\Psr\Container\ContainerExceptionInterface;
-use SWM\TermMerger\Vendor\Psr\Container\ContainerInterface;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Container as ContinyContainer;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Module;
+use SWPMU\TermMerger\Vendor\Bojaghi\Helper\Helper;
+use SWPMU\TermMerger\Vendor\Psr\Container\ContainerExceptionInterface;
+use SWPMU\TermMerger\Vendor\Psr\Container\ContainerInterface;
 
 abstract class SubmitBase implements Module
 {

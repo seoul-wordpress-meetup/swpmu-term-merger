@@ -1,6 +1,6 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\ViteScripts;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\ViteScripts;
 
 class TagHelper
 {

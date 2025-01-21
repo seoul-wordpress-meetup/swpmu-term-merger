@@ -2,6 +2,6 @@ export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
-    'postcss-prefixwrap' : '.swm-term-merger',
+    'postcss-prefixwrap' : '.swpmu-term-merger',
   },
 }

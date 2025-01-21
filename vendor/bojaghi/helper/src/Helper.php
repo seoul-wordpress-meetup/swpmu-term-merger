@@ -1,6 +1,6 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\Helper;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\Helper;
 
 class Helper
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace SWM\TermMerger\Modules;
+namespace SWPMU\TermMerger\Modules;
 
-use SWM\TermMerger\Supports\Taxonomy;
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Module;
-use SWM\TermMerger\Vendor\Bojaghi\ViteScripts\ViteScript;
+use SWPMU\TermMerger\Supports\Taxonomy;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Module;
+use SWPMU\TermMerger\Vendor\Bojaghi\ViteScripts\ViteScript;
 
 /**
  * Module for adding administration menus
@@ -15,53 +15,50 @@ class AdminMenu implements Module
     {
         add_submenu_page(
             'tools.php',
-            _x('Term Merger', 'Menu label', 'swm-term-merger'),
-            _x('Term Merger', 'Menu label', 'swm-term-merger'),
+            _x('SWPMU Term Merger', 'Menu label', 'swpmu-term-merger'),
+            _x('SWPMU Term Merger', 'Menu label', 'swpmu-term-merger'),
             'administrator',
-            'swm-term-merger',
+            'swpmu-term-merger',
             [$this, 'outputTermMergerPage'],
         );
     }
 
     public function outputTermMergerPage(): void
     {
-        echo '<h1 class="wp-heading-inline">' . esc_html_x('Term Merger', 'H1 title', 'swm-term-merger') . '</h1>' . PHP_EOL;
+        echo '<h1 class="wp-heading-inline">' . esc_html_x('Term Merger', 'H1 title', 'swpmu-term-merger') . '</h1>' . PHP_EOL;
         echo '<hr class="wp-header-end"/>' . PHP_EOL;
-        echo '<div class="wrap swm-term-merger" id="term-merger-root" data-vite-script-root="true"></div>' . PHP_EOL;
+        echo '<div class="wrap swpmu-term-merger" id="term-merger-root" data-vite-script-root="true"></div>' . PHP_EOL;
 
-        $vite = swmTmgrGet(ViteScript::class);
+        $vite = swpmuTmgrGet(ViteScript::class);
         if ($vite) {
             /**
              * @see conf/admin-ajax.php
              */
             $vite
-                ->add('swm-term-merger', 'src/term-merger.tsx')
+                ->add('swpmu-term-merger', 'src/term-merger.tsx')
                 ->scriptTranslation('swpmu-term-merger')
                 ->vars(
-                    'swmTermMerger',
+                    'swpmuTermMerger',
                     [
                         'actions'      => [
                             'getTerms'   => [
-                                'action' => 'swmTmgr/getTerms',
-                                'key'    => '_swm_tmgr_nonce',
-                                'nonce'  => wp_create_nonce('swmTmgr/getTerms'),
+                                'action' => 'swpmuTmgr/getTerms',
+                                'key'    => '_swpmu_tmgr_nonce',
+                                'nonce'  => wp_create_nonce('swpmuTmgr/getTerms'),
                             ],
                             'mergeTerms' => [
-                                'action' => 'swmTmgr/mergeTerms',
-                                'key'    => '_swm_tmgr_nonce',
-                                'nonce'  => wp_create_nonce('swmTmgr/mergeTerms'),
+                                'action' => 'swpmuTmgr/mergeTerms',
+                                'key'    => '_swpmu_tmgr_nonce',
+                                'nonce'  => wp_create_nonce('swpmuTmgr/mergeTerms'),
                             ],
                         ],
                         'endpoint'     => admin_url('admin-ajax.php'),
                         'initialState' => wp_get_environment_type() === 'production' ? [
-                            'currentStep' => '',
-                            'selected'    => [],
-                            'taxonomies'  => swmTmgrGet(Taxonomy::class)->getTaxonomies(),
-                            'taxonomy'    => '',
+                            'taxonomies' => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
                         ] : [
                             'currentStep' => 'taxonomy-select',
                             'selected'    => [],
-                            'taxonomies'  => swmTmgrGet(Taxonomy::class)->getTaxonomies(),
+                            'taxonomies'  => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
                             'taxonomy'    => '',
                         ],
                     ],

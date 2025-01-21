@@ -1,14 +1,14 @@
 <?php
 
-namespace SWM\TermMerger\Supports;
+namespace SWPMU\TermMerger\Supports;
 
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Support;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Support;
 use WP_Query;
 
 final class Workspace implements Support
 {
-    public const POST_TYPE     = 'swm_tmgr_workspace';
-    public const META_KEY_DATA = '_swm_tmgr_workspace';
+    public const POST_TYPE     = 'swpmu_workspace';
+    public const META_KEY_DATA = '_swpmu_workspace';
 
     public function __construct()
     {
@@ -20,44 +20,44 @@ final class Workspace implements Support
     public static function getCptArgs(): array
     {
         return [
-            'label'               => __('Workspaces', 'swm-term-merger'),
+            'label'               => __('Workspaces', 'swpmu-term-merger'),
             'labels'              => [
-                'name'          => _x('Workspaces', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                'singular_name' => _x('Workspace', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'add_new'                  => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'add_new_item'             => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'edit_item'                => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'new_item'                 => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'view_item'                => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'view_items'               => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'search_items'             => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'not_found'                => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'not_found_in_trash'       => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'parent_item_colon'        => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'all_items'                => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'archives'                 => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'attributes'               => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'insert_into_item'         => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'uploaded_to_this_item'    => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'featured_image'           => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'set_featured_image'       => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'remove_featured_image'    => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'use_featured_image'       => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'menu_name'                => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'filter_items_list'        => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'filter_by_date'           => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'items_list_navigation'    => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'items_list'               => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_published'           => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_published_privately' => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_reverted_to_draft'   => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_trashed'             => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_scheduled'           => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_updated'             => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_link'                => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
-                // 'item_link_description'    => _x('', 'swm_tmgr_workspace label', 'swm-term-merger'),
+                'name'          => _x('Workspaces', 'swpmu_workspace label', 'swpmu-term-merger'),
+                'singular_name' => _x('Workspace', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'add_new'                  => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'add_new_item'             => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'edit_item'                => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'new_item'                 => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'view_item'                => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'view_items'               => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'search_items'             => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'not_found'                => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'not_found_in_trash'       => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'parent_item_colon'        => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'all_items'                => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'archives'                 => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'attributes'               => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'insert_into_item'         => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'uploaded_to_this_item'    => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'featured_image'           => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'set_featured_image'       => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'remove_featured_image'    => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'use_featured_image'       => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'menu_name'                => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'filter_items_list'        => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'filter_by_date'           => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'items_list_navigation'    => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'items_list'               => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_published'           => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_published_privately' => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_reverted_to_draft'   => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_trashed'             => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_scheduled'           => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_updated'             => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_link'                => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
+                // 'item_link_description'    => _x('', 'swpmu_workspace label', 'swpmu-term-merger'),
             ],
-            // 'description'                     => _x('', 'Description of swm_tmgr_workspace', 'swm-term-merger'),
+            // 'description'                     => _x('', 'Description of swpmu_workspace', 'swpmu-term-merger'),
             'public'              => false,
             'hierarchical'        => false,
             'exclude_from_search' => true,

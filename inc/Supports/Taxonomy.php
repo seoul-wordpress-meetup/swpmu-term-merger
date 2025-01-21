@@ -1,8 +1,8 @@
 <?php
 
-namespace SWM\TermMerger\Supports;
+namespace SWPMU\TermMerger\Supports;
 
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Support;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Support;
 use WP_Error;
 use WP_Term;
 use WP_Term_Query;
@@ -45,7 +45,7 @@ class Taxonomy implements Support
     public function getTerms(string $taxonomy, string|array $args = ''): array|WP_Error
     {
         if (!taxonomy_exists($taxonomy)) {
-            return new WP_Error('error', _x('Taxonomy does not exist', 'error message', 'swm-term-merger'));
+            return new WP_Error('error', _x('Taxonomy does not exist', 'error message', 'swpmu-term-merger'));
         }
 
         $args = wp_parse_args($args);

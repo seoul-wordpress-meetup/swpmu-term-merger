@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace SWM\TermMerger\Vendor\Bojaghi\Continy;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\Continy;
 
-use SWM\TermMerger\Vendor\Bojaghi\Contract\Container;
+use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Container;
 use ReflectionClass;
 use ReflectionFunction;
 use ReflectionMethod;

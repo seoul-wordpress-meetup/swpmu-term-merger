@@ -1,6 +1,6 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\Cpt;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\Cpt;
 
 class CustomPosts
 {

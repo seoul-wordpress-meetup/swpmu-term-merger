@@ -1,6 +1,6 @@
 <?php
 
-namespace SWM\TermMerger\Vendor\Bojaghi\AdminAjax;
+namespace SWPMU\TermMerger\Vendor\Bojaghi\AdminAjax;
 
 class AdminAjax extends SubmitBase
 {

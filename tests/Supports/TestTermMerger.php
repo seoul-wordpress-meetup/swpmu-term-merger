@@ -1,8 +1,8 @@
 <?php
 
-namespace SWM\TermMerger\Tests\Supports;
+namespace SWPMU\TermMerger\Tests\Supports;
 
-use SWM\TermMerger\Supports\TermMerger;
+use SWPMU\TermMerger\Supports\TermMerger;
 use WP_UnitTestCase;
 
 class TestTermMerger extends WP_UnitTestCase
