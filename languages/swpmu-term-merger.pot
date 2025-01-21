@@ -1,0 +1,70 @@
+# Copyright (C) 2025 Seoul WordPress Meetup
+# This file is distributed under the GPL-v2-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: SWPMU Term Merger 0.9.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/swpmu-term-merger\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-21T14:25:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: swpmu-term-merger\n"
+
+#. Plugin Name of the plugin
+#: swpmu-term-merger.php
+msgid "SWPMU Term Merger"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: swpmu-term-merger.php
+msgid "https://github.com/seoul-wordpress-meetup/swpmu-term-merger"
+msgstr ""
+
+#. Description of the plugin
+#: swpmu-term-merger.php
+msgid "Term merger plugin for WordPress."
+msgstr ""
+
+#. Author of the plugin
+#: swpmu-term-merger.php
+msgid "Seoul WordPress Meetup"
+msgstr ""
+
+#. Author URI of the plugin
+#: swpmu-term-merger.php
+msgid "https://www.meetup.com/ko-KR/wordpress-meetup-seoul/"
+msgstr ""
+
+#: inc/Modules/AdminMenu.php:18
+#: inc/Modules/AdminMenu.php:19
+msgctxt "Menu label"
+msgid "SWPMU Term Merger"
+msgstr ""
+
+#: inc/Modules/AdminMenu.php:28
+msgctxt "H1 title"
+msgid "Term Merger"
+msgstr ""
+
+#: inc/Supports/Taxonomy.php:48
+msgctxt "error message"
+msgid "Taxonomy does not exist"
+msgstr ""
+
+#: inc/Supports/Workspace.php:23
+msgid "Workspaces"
+msgstr ""
+
+#: inc/Supports/Workspace.php:25
+msgctxt "swpmu_workspace label"
+msgid "Workspaces"
+msgstr ""
+
+#: inc/Supports/Workspace.php:26
+msgctxt "swpmu_workspace label"
+msgid "Workspace"
+msgstr ""
