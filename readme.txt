@@ -1,9 +1,9 @@
-=== SWM Term Merger ===
+=== SWPMU Term Merger ===
 Contributor:  changwoo
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 License:      GPLv2 or later
 Requires PHP: 8.0
-Stable tag:   0.9.0
+Stable tag:   0.9.1
 Tags:         arrangement, merge, taxonomy, term
 Tested up to: 6.7.1
 
@@ -21,7 +21,12 @@ This plugin is designed to simplify the process, providing a more efficient and 
 for merging terms.
 
 == Changelog ==
+= 0.9.1 =
+Jan. 22nd. 2025
+
+- Revised version
+
 = 0.9.0 =
-Jan. 5th, 2024
+Jan. 5th, 2025
 
 - Pre-release version
