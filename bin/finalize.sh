@@ -59,3 +59,6 @@ find "$DST/vendor/bojaghi" -maxdepth 2 -type d  \( -name 'bin' -o -name 'tests' 
 
 # Remove all .dic files under bojaghi
 find "$DST/vendor/bojaghi" -maxdepth 2 -type f -name 'custom.dic' -exec rm {} \;
+
+# Remove all .DS_Store files, just in case
+find "$DST" -type f -name '.DS_Store' -exec rm -f {} \;
