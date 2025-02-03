@@ -6,6 +6,10 @@ use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyException;
 use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyFactory;
 use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyNotFoundException;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 const SWPMU_TMGR_NS_PREFIX = 'SWPMU\\TermMerger\\Vendor\\';
 
 if (!function_exists('strPascalToKebab')) {
