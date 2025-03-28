@@ -11,7 +11,7 @@
  * Requires PHP:      8.0
  * Tested up to:      6.7
  * Textdomain:        swpmu-term-merger
- * Version:           0.9.2
+ * Version:           0.9.3
  */
 
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 }
 
 const SWPMU_TERM_MERGER_MAIN    = __FILE__;
-const SWPMU_TERM_MERGER_VERSION = '0.9.2';
+const SWPMU_TERM_MERGER_VERSION = '0.9.3';
 
 // Call autoloader earlier than composer autoload.
 require_once __DIR__ . '/inc/functions.php';
