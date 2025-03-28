@@ -56,10 +56,10 @@ class AdminMenu implements Module
                         'initialState' => wp_get_environment_type() === 'production' ? [
                             'taxonomies' => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
                         ] : [
-                            'currentStep' => 'taxonomy-select',
+                            'currentStep' => 'term-select',
                             'selected'    => [],
                             'taxonomies'  => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
-                            'taxonomy'    => '',
+                            'taxonomy'    => 'post_tag',
                         ],
                     ],
                 )
