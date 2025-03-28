@@ -7,6 +7,8 @@ import {ActionType} from '@/term-merger/reducer'
 import useGetTermsQuery from '@/term-merger/useGetTermsQuery.ts'
 import {Term} from '@/types'
 import {__} from '@wordpress/i18n'
+// Demo
+import Demo from './Step2_TermSelectDemo'
 
 export default function Step2_TermSelect() {
     const {
@@ -19,62 +21,66 @@ export default function Step2_TermSelect() {
     const query = useGetTermsQuery()
 
     return (
-        <ComponentContainer>
-            <Card>
-                <CardHeader>
-                    <CardHeaderLabel>
-                        {__('Step 2/3: Term Selection', 'swpmu-term-merger')}
-                    </CardHeaderLabel>
-                </CardHeader>
-                <CardBody>
-                    <CardBodyDescription className="">
-                        {__('Please choose two or more terms to merge.', 'swpmu-term-merger')}
-                    </CardBodyDescription>
-                    <RenderQueryResult query={query}>
-                        <ul className="sw-flex sw-flex-wrap sw-m-0 sw-p-0">
-                            {/*****************************************
-                             * Each term is listed here.              *
-                             ******************************************/}
-                            {query.data?.map((term) => (
-                                <li
-                                    className="sw-w-2/12"
-                                    key={term.term_id}
-                                >
-                                    <SingleTerm term={term} />
-                                </li>
-                            ))}
-                        </ul>
-                    </RenderQueryResult>
-                </CardBody>
-                <CardFooter>
-                    <div className="sw-flex sw-justify-between sw-mt-4 sw-mb-2 sw-mx-2">
-                        <button
-                            className="button button-secondary button-hero"
-                            onClick={() => {
-                                dispatch({
-                                    type: ActionType.SET_CURRENT_STEP,
-                                    payload: 'taxonomy-select',
-                                })
-                            }}
-                        >
-                            &laquo; {__('Previous Step', 'swpmu-term-merger')}
-                        </button>
-                        <button
-                            className="button button-primary button-hero"
-                            disabled={selected.size < 2}
-                            onClick={() => {
-                                dispatch({
-                                    type: ActionType.SET_CURRENT_STEP,
-                                    payload: 'merge-select',
-                                })
-                            }}
-                        >
-                            {__('Merge Selection', 'swpmu-term-merger')} &raquo;
-                        </button>
-                    </div>
-                </CardFooter>
-            </Card>
-        </ComponentContainer>
+        <>
+            <Demo />
+            <ComponentContainer>
+                <Card>
+                    <CardHeader>
+                        <CardHeaderLabel>
+                            {__('Step 2/3: Term Selection', 'swpmu-term-merger')}
+                        </CardHeaderLabel>
+                    </CardHeader>
+                    <CardBody>
+                        <CardBodyDescription className="">
+                            {__('Please choose two or more terms to merge.', 'swpmu-term-merger')}
+                        </CardBodyDescription>
+                        <RenderQueryResult query={query}>
+                            <ul className="sw-flex sw-flex-wrap sw-m-0 sw-p-0">
+                                {/*****************************************
+                                 * Each term is listed here.              *
+                                 ******************************************/}
+                                {query.data?.map((term) => (
+                                    <li
+                                        className="sw-w-2/12"
+                                        key={term.term_id}
+                                    >
+                                        <SingleTerm term={term} />
+                                    </li>
+                                ))}
+                            </ul>
+                        </RenderQueryResult>
+                    </CardBody>
+                    <CardFooter>
+                        <div className="sw-flex sw-justify-between sw-mt-4 sw-mb-2 sw-mx-2">
+                            <button
+                                className="button button-secondary button-hero"
+                                onClick={() => {
+                                    dispatch({
+                                        type: ActionType.SET_CURRENT_STEP,
+                                        payload: 'taxonomy-select',
+                                    })
+                                }}
+                            >
+                                &laquo; {__('Previous Step', 'swpmu-term-merger')}
+                            </button>
+                            <button
+                                className="button button-primary button-hero"
+                                disabled={selected.size < 2}
+                                onClick={() => {
+                                    dispatch({
+                                        type: ActionType.SET_CURRENT_STEP,
+                                        payload: 'merge-select',
+                                    })
+                                }}
+                            >
+                                {__('Merge Selection', 'swpmu-term-merger')} &raquo;
+                            </button>
+                        </div>
+                    </CardFooter>
+                </Card>
+            </ComponentContainer>
+        </>
+
     )
 }
 
