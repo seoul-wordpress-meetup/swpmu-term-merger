@@ -56,14 +56,47 @@ class AdminMenu implements Module
                         'initialState' => wp_get_environment_type() === 'production' ? [
                             'taxonomies' => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
                         ] : [
-                            'currentStep' => 'taxonomy-select',
+                            'currentStep' => 'term-merge',
+                            // 'groups'      => $this->getDevRandomGroups(),
+                            'maxGroups'   => 3,
                             'selected'    => [],
                             'taxonomies'  => swpmuTmgrGet(Taxonomy::class)->getTaxonomies(),
-                            'taxonomy'    => '',
+                            'taxonomy'    => 'post_tag',
                         ],
                     ],
                 )
             ;
         }
+    }
+
+    private function getDevRandomGroups(string $taxonomy = 'post_tag', int $size = 3, int $numGroups = 1): array
+    {
+        $query = new \WP_Term_Query(
+            [
+                'fields'     => 'ids',
+                'hide_empty' => false,
+                'number'     => $size * $numGroups,
+                'taxonomy'   => $taxonomy,
+            ],
+        );
+
+        $groups = [];
+        $id     = 1;
+        $terms  = $query->get_terms();
+
+        for ($i = 0; $i < $numGroups; ++$i) {
+            $offset = $i * $size;
+            if ($offset >= count($terms)) {
+                break;
+            }
+            $groups[] = [
+                'id'    => $id,
+                'terms' => array_slice($terms, $offset, $size),
+                'title' => "Group #{$id}",
+            ];
+            ++$id;
+        }
+
+        return $groups;
     }
 }

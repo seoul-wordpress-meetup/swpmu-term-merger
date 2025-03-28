@@ -4,7 +4,7 @@ License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 License:           GPLv2 or later
 Requires at least: 5.9
 Requires PHP:      8.0
-Stable tag:        0.9.4
+Stable tag:        1.0.0
 Tags:              arrangement, merge, taxonomy, term
 Tested up to:      6.7
 
@@ -19,10 +19,10 @@ This plugin is designed to simplify the process, providing a more efficient and 
 
 == Changelog ==
 
-= 0.9.4 =
-Mar. 29th, 2025
+= 1.0.0 =
+Apr. 2nd, 2025
 
-- Fix typos
+- Introduce the new UI
 
 = 0.9.3 =
 Mar. 28th, 2025

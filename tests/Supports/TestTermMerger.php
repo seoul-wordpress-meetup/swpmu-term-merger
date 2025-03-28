@@ -15,37 +15,43 @@ class TestTermMerger extends WP_UnitTestCase
         $p2 = $this->factory()->post->create_and_get();
 
         // Create test terms.
-        $t1  = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T1']); // Pivot
+        $t10 = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T10']); // Pivot
         $t11 = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T11']);
         $t12 = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T12']);
-        $t2  = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T2']); // Pivot
+        $t20 = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T20']); // Pivot
         $t21 = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T21']);
-        $t3  = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T3']);
+        $t30 = $this->factory()->term->create_and_get(['taxonomy' => 'post_tag', 'name' => 'T30']);
 
         // Create some relationships.
-        wp_set_object_terms($p0->ID, [$t1->term_id, $t11->term_id, $t12->term_id], 'post_tag');
-        wp_set_object_terms($p1->ID, [$t2->term_id, $t21->term_id], 'post_tag');
-        wp_set_object_terms($p2->ID, [$t1->term_id, $t11->term_id, $t12->term_id, $t2->term_id, $t21->term_id, $t3->term_id], 'post_tag');
+        wp_set_object_terms($p0->ID, [$t10->term_id, $t11->term_id, $t12->term_id], 'post_tag');
+        wp_set_object_terms($p1->ID, [$t11->term_id, $t20->term_id, $t21->term_id], 'post_tag');
+        wp_set_object_terms($p2->ID, [$t10->term_id, $t11->term_id, $t12->term_id, $t20->term_id, $t21->term_id, $t30->term_id], 'post_tag');
 
         /**
-         * T1  ----+---- P0, P2
-         * T11 ----+
-         * T12 ----+
+         * Before:
+         * -------
+         * T10 ----+---- P0, P2
+         * T11 ----+---- P0, P1, P2
+         * T12 ----+---- P0, P2
+         * T20 ----+---- P1, P2
+         * T21 ----+---- P1, P2
+         * T30 ----+---- P2
          *
-         * T2  ----+---- P1, P2
-         * T21 ----+
-         *
-         * T3  ----+---- P2
+         * After
+         * -----
+         *  T10 ----+---- P0, P1, P2
+         *  T20 ----+---- P1, P2
+         *  T30 ----+---- P2
          */
 
         $m = new TermMerger();
-        $m->merge($t1, [$t1, $t11, $t1, $t12]);
-        $m->merge($t2, [$t2, $t21]);
+        $m->merge($t10, [$t10, $t11, $t10 /* intentional duplication */, $t12]);
+        $m->merge($t20, [$t20, $t21]);
 
         global $wpdb;
 
         // Check if term T11, T12, and T21 do not exist.
-        $query   = $wpdb->prepare(
+        $query = $wpdb->prepare(
             "SELECT COUNT(*) FROM $wpdb->terms WHERE name IN (%d, %d, %d)",
             $t11->term_id,
             $t12->term_id,
@@ -74,19 +80,26 @@ class TestTermMerger extends WP_UnitTestCase
         $relCnt = (int)$wpdb->get_var($query);
         $this->assertEquals(0, $relCnt);
 
-        // Check count of T1, T2 in term_relationships.
+        // Check count of T1, T2, T3 in term_relationships.
         $query = $wpdb->prepare(
-            "SELECT object_id FROM $wpdb->term_relationships WHERE term_taxonomy_id = %d",
-            $t1->term_taxonomy_id,
+            "SELECT object_id FROM $wpdb->term_relationships WHERE term_taxonomy_id=%d ORDER BY object_id",
+            $t10->term_taxonomy_id,
         );
         $objT1 = array_map(fn($v) => intval($v), $wpdb->get_col($query));
-        $this->assertEquals([$p0->ID, $p2->ID], $objT1);
+        $this->assertEquals([$p0->ID, $p1->ID, $p2->ID], $objT1);
 
         $query = $wpdb->prepare(
-            "SELECT object_id FROM $wpdb->term_relationships WHERE term_taxonomy_id = %d",
-            $t2->term_taxonomy_id,
+            "SELECT object_id FROM $wpdb->term_relationships WHERE term_taxonomy_id=%d ORDER BY object_id",
+            $t20->term_taxonomy_id,
         );
         $objT2 = array_map(fn($v) => intval($v), $wpdb->get_col($query));
         $this->assertEquals([$p1->ID, $p2->ID], $objT2);
+
+        $query = $wpdb->prepare(
+            "SELECT object_id FROM $wpdb->term_relationships WHERE term_taxonomy_id=%d ORDER BY object_id",
+            $t30->term_taxonomy_id,
+        );
+        $objT3 = array_map(fn($v) => intval($v), $wpdb->get_col($query));
+        $this->assertEquals([$p2->ID], $objT3);
     }
 }

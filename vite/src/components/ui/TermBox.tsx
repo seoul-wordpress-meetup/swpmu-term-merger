@@ -11,23 +11,12 @@ const TermBox = forwardRef<HTMLDivElement, Props>((props: Props, ref) => {
     return (
         <div
             className={cn(
-                'sw-bg-gray-100',                               // background
+                'sw-bg-gray-100 hover:sw-bg-gray-300',        // background
                 'sw-border sw-border-solid sw-border-gray-400', // border
-                'sw-m-1 sw-p-2',                                  // margin and padding
                 'sw-text-md hover:sw-font-bold',                  // font
-                'hover:sw-font-bold hover:sw-cursor-pointer',
-                // If on hover
-                selected ?
-                    // hover on
-                    'hover:sw-bg-gray-600' :
-                    // hover off
-                    'hover:sw-bg-gray-300',
+                'hover:sw-font-bold hover:sw-cursor-pointer',     // hover
                 // If selected,
-                selected ? // select
-                    // selected
-                    'sw-bg-gray-400 sw-text-black sw-font-bold hover:sw-text-white' :
-                    // non-selected
-                    '',
+                selected && 'sw-bg-gray-300 sw-text-black sw-font-bold',
                 className,
             )}
             ref={ref}
@@ -40,3 +29,6 @@ const TermBox = forwardRef<HTMLDivElement, Props>((props: Props, ref) => {
 TermBox.displayName = 'TermBox'
 
 export default TermBox
+export type {
+    Props,
+}

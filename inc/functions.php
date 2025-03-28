@@ -6,7 +6,7 @@ use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyException;
 use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyFactory;
 use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyNotFoundException;
 
-if (!defined('ABSPATH')) {
+if (!(defined('SWPMU_DOING_TEST') && SWPMU_DOING_TEST) && !defined('ABSPATH')) {
     exit;
 }
 

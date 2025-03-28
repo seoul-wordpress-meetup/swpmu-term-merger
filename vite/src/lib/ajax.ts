@@ -29,7 +29,7 @@ const adminAjax = {
      * @param taxonomy
      */
     mergeTerms: async (head: number, target: number[], taxonomy: string) => {
-        return adminAjaxPost('mergeTerms', {head, target, taxonomy})
+        return adminAjaxPost<undefined>('mergeTerms', {head, target, taxonomy})
     },
 }
 
@@ -98,6 +98,8 @@ function checkAjaxResponse<T = any>(
 
     if (errorHandler) {
         errorHandler(data)
+    } else {
+        throw data
     }
 }
 

@@ -13,12 +13,15 @@ export default function Step1_TaxonomySelect() {
         },
     } = useGlobalContext()
 
+    console.log('taxonomies', taxonomies)
+    console.log('taxonomy', taxonomy)
+
     return (
         <ComponentContainer className="sw-max-w-md">
             <Card>
                 <CardHeader>
                     <CardHeaderLabel>
-                        {__('Step 1/3: Choose Taxonomy', 'swpmu-term-merger')}
+                        {__('Step 1/2: Choose Taxonomy', 'swpmu-term-merger')}
                     </CardHeaderLabel>
                 </CardHeader>
                 <CardBody>
@@ -58,7 +61,7 @@ export default function Step1_TaxonomySelect() {
                             onClick={() => {
                                 dispatch({
                                     type: ActionType.SET_CURRENT_STEP,
-                                    payload: 'term-select',
+                                    payload: 'term-merge',
                                 })
                             }}
                             type="button"

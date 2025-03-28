@@ -5,7 +5,6 @@ namespace SWPMU\TermMerger\Modules;
 use SWPMU\TermMerger\Supports\Taxonomy;
 use SWPMU\TermMerger\Supports\TermMerger;
 use SWPMU\TermMerger\Vendor\Bojaghi\Continy\Continy;
-use SWPMU\TermMerger\Vendor\Bojaghi\Continy\ContinyException;
 use SWPMU\TermMerger\Vendor\Bojaghi\Contract\Module;
 
 class AjaxHandler implements Module
@@ -14,9 +13,6 @@ class AjaxHandler implements Module
     {
     }
 
-    /**
-     * @throws ContinyException
-     */
     public function getTaxonomies(): void
     {
         check_ajax_referer('swpmuTmgr/getTaxonomies', '_swpmu_tmgr_nonce');
@@ -26,9 +22,6 @@ class AjaxHandler implements Module
         wp_send_json_success($taxonomies);
     }
 
-    /**
-     * @throws ContinyException
-     */
     public function getTerms(): void
     {
         check_ajax_referer('swpmuTmgr/getTerms', '_swpmu_tmgr_nonce');
@@ -49,8 +42,6 @@ class AjaxHandler implements Module
      * - head:     Pivot term ID
      * - target:   Array of term ID. Head ID may be included or not.
      * - taxonomy: Hint to confirm that all term IDs are valid terms of the taxonomy.
-     *
-     * @throws ContinyException
      */
     public function mergeTerms(): void
     {

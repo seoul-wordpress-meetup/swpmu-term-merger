@@ -11,6 +11,6 @@ const ComponentContainer = React.forwardRef<HTMLDivElement, React.HTMLAttributes
             {children}
         </div>
     ))
-
+ComponentContainer.displayName = 'ComponentContainer'
 
 export default ComponentContainer
