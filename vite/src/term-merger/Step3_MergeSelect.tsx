@@ -82,7 +82,7 @@ export default function Step3_MergeSelect() {
                 <CardBody>
                     <RenderQueryResult query={query}>
                         <CardBodyDescription className="sw-mb-4">
-                            {__('Please choolse a head term from the term list below. All the other terms will be merged into it.', 'swpmu-term-merger')}
+                            {__('Please choose a head term from the term list below. All the other terms will be merged into it.', 'swpmu-term-merger')}
                         </CardBodyDescription>
                         <ul className="sw-m-0 sw-p-0">
                             {selectedTerms.map((term) => (

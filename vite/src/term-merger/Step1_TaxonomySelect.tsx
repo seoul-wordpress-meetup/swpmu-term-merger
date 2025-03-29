@@ -42,7 +42,7 @@ export default function Step1_TaxonomySelect() {
                             value={taxonomy}
                         >
                             <option value={''} disabled={true}>
-                                {__('Choolse Taxonomy', 'swpmu-term-merger')}
+                                {__('Choose Taxonomy', 'swpmu-term-merger')}
                             </option>
                             {Object.entries(taxonomies).map(([key, value]) => (
                                 <option key={key} value={key}>{value}</option>
