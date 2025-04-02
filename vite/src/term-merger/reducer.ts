@@ -219,7 +219,7 @@ const useGlobalReducer = (initialState: Partial<State> = {}) => {
         ...restInitialState
     } = initialState
 
-    let nextGroupId = initialState.nextGroupId || 0
+    let nextGroupId = initialState.nextGroupId || 1
 
     // Convert rawGroups
     const assignIndex = new Map<TermId, GroupId>,
