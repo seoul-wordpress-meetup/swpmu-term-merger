@@ -4,7 +4,7 @@ License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 License:           GPLv2 or later
 Requires at least: 5.9
 Requires PHP:      8.0
-Stable tag:        1.0.1
+Stable tag:        1.0.2
 Tags:              arrangement, merge, taxonomy, term
 Tested up to:      6.7
 
@@ -18,6 +18,11 @@ While merging terms might seem straightforward at first glance, performing this 
 This plugin is designed to simplify the process, providing a more efficient and user-friendly solution for merging terms.
 
 == Changelog ==
+
+= 1.0.2 =
+Apr. 4th, 2025
+
+- Update .pot file
 
 = 1.0.1 =
 Apr. 2nd, 2025

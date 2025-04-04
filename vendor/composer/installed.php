@@ -3,7 +3,7 @@
         'name' => 'swpmu/term-merger',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd35a0cc4b06ce86b5ce7ae63fdfce5964110418c',
+        'reference' => 'f16bc80f5f39f5ac631774f21eb1a841cde4fbfc',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -328,7 +328,7 @@
         'swpmu/term-merger' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd35a0cc4b06ce86b5ce7ae63fdfce5964110418c',
+            'reference' => 'f16bc80f5f39f5ac631774f21eb1a841cde4fbfc',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

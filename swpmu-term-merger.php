@@ -11,7 +11,7 @@
  * Requires PHP:      8.0
  * Tested up to:      6.7
  * Textdomain:        swpmu-term-merger
- * Version:           1.0.1
+ * Version:           1.0.2
  */
 
 if (!defined('ABSPATH')) {
