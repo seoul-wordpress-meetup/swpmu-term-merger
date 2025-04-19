@@ -9,9 +9,9 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 5.9
  * Requires PHP:      8.0
- * Tested up to:      6.7
+ * Tested up to:      6.8
  * Textdomain:        swpmu-term-merger
- * Version:           1.0.2
+ * Version:           1.0.3
  */
 
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 }
 
 const SWPMU_TERM_MERGER_MAIN    = __FILE__;
-const SWPMU_TERM_MERGER_VERSION = '1.0.1';
+const SWPMU_TERM_MERGER_VERSION = '1.0.3';
 
 // Call autoloader earlier than composer autoload.
 require_once __DIR__ . '/inc/functions.php';
